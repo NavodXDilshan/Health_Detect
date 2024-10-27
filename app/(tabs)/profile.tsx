@@ -2,7 +2,9 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from 'rea
 import React from 'react'
 import {router, Stack} from 'expo-router'
 import Colors from '@/constants/Colors'
-import ProfileCards from '@/components/ProfileCards'
+import ProfileHeader from '@/components/profile/ProfileHeader'
+import ProfileCards from '@/components/profile/ProfileCards'
+import ProfileContent from '@/components/profile/ProfileContent'
 
 export default function profile() {
   return (
@@ -14,19 +16,17 @@ export default function profile() {
 
     <View style={styles.container}>
       <View style={styles.imageArea}>
-      <Image
-          source={{
-              uri: "https://xsgames.co/randomusers/avatar.php?g=male"
-          }}
-          style={styles.profileImg}
-          />
-          <Text style={styles.imageTxt}>Navod Dilshan</Text>
+        <ProfileHeader />
       </View>
+      <ScrollView style={{ height: 400 }}
+      showsVerticalScrollIndicator={false}>
       <View style={styles.cardArea}>
-
+          <ProfileCards />
       </View>
       <View style={styles.contentArea}>
+        <ProfileContent />
       </View>
+      </ScrollView>
     </View>
     </>
   )
@@ -40,13 +40,15 @@ const styles = StyleSheet.create({
     height:150,
     borderRadius:100,
     borderWidth:5,
-    borderColor:"purple"
+    borderColor:Colors.primaryBlue
   },
   imageArea:{
     flex:1.5,
     // backgroundColor:"blue",
     justifyContent:"center",
-    alignItems:"center",
+    alignItems:"flex-start",
+    marginLeft:20,
+    marginTop:20,
   },
   cardArea:{
     flex:1.3,
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
   },
   contentArea:{
     flex:2,
-    backgroundColor:"orange",
+    // backgroundColor:"orange",
   },
   imageTxt:{
     fontSize:25,
