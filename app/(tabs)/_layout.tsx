@@ -20,7 +20,7 @@ export default function Layout() {
             <Ionicons name='analytics-sharp' size={28} color={color} />
         )}}/>
         <Tabs.Screen name='chatbot' options={{tabBarIcon: ({color}) => (
-            <Ionicons name="chatbubble-ellipses-sharp" size={28} color={color} />
+            <Ionicons name="chatbubble-ellipses" size={28} color={color} />
         )}}/>
         <Tabs.Screen name='feed' options={{tabBarIcon: ({color}) => (
             <View 
@@ -38,7 +38,7 @@ export default function Layout() {
 
   const styles = StyleSheet.create({
     tabStyle:{
-        backgroundColor:Colors.primaryColor,
+        // backgroundColor:Colors.primaryBlue,
         paddingHorizontal:16,
         paddingVertical:12,
         borderRadius:10,

@@ -1,6 +1,7 @@
 import { View, Text, ScrollView,Image, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import Colors from '@/constants/Colors'
+import { router } from 'expo-router'
 
 export default function ProfileCards() {
   return (
@@ -10,7 +11,7 @@ export default function ProfileCards() {
     contentContainerStyle={{
       gap:10,
     }}>
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>router.push("../profile/bmi/1")}>
       <View style={styles.card}>
         <Image 
           source={require('../../assets/images/bmi.webp')}
@@ -18,7 +19,7 @@ export default function ProfileCards() {
         <Text style={styles.cardImageTxt}>Check your BMI here!</Text>
       </View>
     </TouchableOpacity>
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>router.push("../profile/waterIntake/1")}>
       <View style={styles.card}>
         <Image 
           source={require('../../assets/images/water.jpeg')}
@@ -26,7 +27,7 @@ export default function ProfileCards() {
         <Text style={styles.cardImageTxt}>Track your water intake for the day!</Text>
       </View>
     </TouchableOpacity>
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>router.push("../profile/calories/1")}>
       <View style={styles.card}>
         <Image 
           source={require('../../assets/images/lifestyle.jpg')}
