@@ -35,6 +35,14 @@ export default function ProfileCards() {
         <Text style={styles.cardImageTxt}>Burn your calories</Text>
       </View>
     </TouchableOpacity>
+    <TouchableOpacity onPress={()=>router.push("../profile/mealScanner/1")}>
+      <View style={styles.card}>
+        <Image 
+          source={require('../../assets/images/lifestyle.jpg')}
+            style={styles.cardImg}/>
+        <Text style={styles.cardImageTxt}>Burn your calories</Text>
+      </View>
+    </TouchableOpacity>
     </ScrollView>
   </View>
   )

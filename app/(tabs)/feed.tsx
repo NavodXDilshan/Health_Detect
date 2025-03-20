@@ -136,10 +136,7 @@ export default function Feed() {
               <FeedBox person={person} />
           </View>
           ))}
-        </ScrollView>
-
-
-        
+        </ScrollView> 
       </View>
     </>
   );
